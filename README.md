@@ -1,1 +1,6 @@
-# timeseries-data-generating-ensemble-and-prediction
+# timeseries-data-generating-ensembles
+In certain applications, such as uncertainty quantification, it's necessary to generate ensembles for time series data while accurately modeling their temporal correlation (i.e., colored noise). the example provided in this python script demonstrates how to generate ensembles for air temperature (tair) using an autoregressive (AR) model.
+The process involves decomposing the time series into three components: trend, seasonality, and residuals. The residuals are then modeled with an AR model to capture the temporal correlation. Once the residuals are simulated, they are added back to the trend and seasonality components to form the ensembles.
+
+# timeseries-data-prediction
+In this Python script, we aim to predict air temperature 10 days ahead. The data is first split into training and test sets, with the last 77 days used for testing. We compared the prediction accuracy on test data using various models, including ARIMA, linear regression, support vector regression (SVR), random forest regressor, extra trees regressor, and a simple recurrent neural network (RNN). Among these, ARIMA demonstrated the best performance on the test set, so we used it for the final predictions.
